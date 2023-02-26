@@ -59,6 +59,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'photoshare.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://railway.app/'
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
