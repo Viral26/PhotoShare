@@ -60,7 +60,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'photoshare.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://railway.app/'
+    'https://railway.app/photoshare-production.up'
 ]
 
 
