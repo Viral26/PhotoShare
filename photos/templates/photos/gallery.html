@@ -42,7 +42,12 @@
                                 <div class="card-body">
                                   <small>Category: {{photo.category}}</small>
                                 </div>
-                                <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark btn-sm m-1">View</a>
+                                <div class="row">
+                                    <div class="col">
+                                        <a style="width:46%" href="{% url 'photo' photo.id %}" class="btn btn-outline-dark btn-sm m-1">View</a>
+                                        <a style="width:46%" href="{% url 'delete' photo.id %}" class="btn btn-danger btn-sm m-1">Delete</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         {% endfor %}

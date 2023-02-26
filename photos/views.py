@@ -41,3 +41,13 @@ def addPhoto(request):
         return redirect("/")
 
     return render(request, 'photos/add.html', context={'categories': categories})
+
+def deletePhoto(request, pk):
+    photo = Photo.objects.get(id=pk)
+
+    if request.method == "POST":
+        photo.delete()
+
+        return redirect('/')
+
+    return render(request, 'photos/delete.html', context={'photo': photo})
