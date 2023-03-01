@@ -4,13 +4,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
-                <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
-                <br>
                 <img src="{{photo.image.url}}" height="50%" width="50%">
                 <p>Are you sure to delete this?</p>
                 <form action="" method="POST" class="my-2">
                     {% csrf_token %}
                     <input class="btn btn-danger" type='submit' value="Delete"></input>
+                    <button type="button" class="btn btn-warning"><a href="{% url 'gallery' %}" style="text-decoration: none;color: black;">Cancel</a></button>
                 </form>
             </div>
         </div>
