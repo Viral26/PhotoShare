@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
-                <img src="{{photo.image.url}}" height="50%" width="50%">
+                <img style="height:50vh;width:50vh;" src="{{photo.image.url}}">
                 <p>Are you sure to delete this?</p>
                 <form action="" method="POST" class="my-2">
                     {% csrf_token %}
